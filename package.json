@@ -1,0 +1,74 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "Your Team Dashboard",
+  "main": "pages/index.js",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "standard --verbose | snazzy && stylelint '**/*.js'",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+  },
+  "keywords": [
+    "tv",
+    "dashboard"
+  ],
+  "author": "Abass Olaiya",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.13.3",
+    "dotenv-webpack": "^2.0.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "js-base64": "^3.7.2",
+    "next": "^9.2.2",
+    "polished": "^3.6.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^4.4.1",
+    "tinytime": "^0.2.6",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "snazzy": "^8.0.0",
+    "standard": "^16.0.4",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "babel": {
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      [
+        "styled-components",
+        {
+          "ssr": true,
+          "displayName": true,
+          "preprocess": false
+        }
+      ]
+    ]
+  },
+  "stylelint": {
+    "processors": [
+      "stylelint-processor-styled-components"
+    ],
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-styled-components"
+    ],
+    "syntax": "scss"
+  }
+}
